@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');  /*import the google font : poppins */
+
+/* attributes common for every class */
+*
+{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/*setting the margin and padding to 0 so that there is no space between the elements of the website and the window */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* header class that contains the navigation bar */
+header{
+    position:fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    padding: 30px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    transition: 0.5s;
+    background: #fff;
+}
+
+/* attributes when the nav bar becomes sticky */
+header.sticky{
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/*
+
+header .logo{
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: none;
+}
+
+
+header.sticky .logo{
+    color: #111;
+    display: block;
+}
+
+
+header.sticky .logo:hover{
+     transform: scale(1.2);
+}*/
+
+/* atrributes of the list of menu */
+header ul{
+    position: relative;
+    display: flex;
+}
+
+/* attributes of elements of the list */
+header ul li{
+    position: relative;
+    list-style: none;
+    font-size: 18px;
+}
+
+/* anchor tag      */
+header ul li a{
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: #111;
+    text-decoration: none;
+    
+}
+
+/* when mouse is hovered on the list elemens */
+header ul li a:hover{
+   color: rgb(255, 165, 0);
+}
+
+
+
+/* the class scroll is created in the internal js for the sicky nav bar*/
+.scroll{
+    width: 100%;
+    text-align:left;
+    margin-bottom: 30px;
+   padding-top: 200px;
+ 
+    margin-left: 30px;
+    padding-left: 50px;
+   
+    color: #fff;
+    font-size: 25px;
+}
+
+/*login button */
+button{
+    position: relative;
+    background: #ffa500;
+    display: inline-block;
+    color: #111;
+    margin-top: -6;
+    padding: 6px 25px;
+    
+    font-size:18px;
+    border: none;
+    width: 100%;
+}
+
+
+
+
+/* --------login form------------ */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+span.pwd {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.login {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.login-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* login form finished */
+
+
+/* slideshow */
+
+.slide-container {
+  max-width: 100%;
+  position: relative;
+  margin-top: 48px;
+}
+
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 4.5s;
+  animation-name: fade;
+  animation-duration: 4.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
+
+
+
+/* for the headings of the sections */
+.heading{
+ width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    color: #111;
+}
+
+.heading h2{
+    font-weight: 200;
+    font-size: 30px;
+}
+
+
+
+
+
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+div.desc a{
+    text-decoration: none;
+    color: #111;
+}
+
+div.desc a:hover{
+    color:#ffa500;
+}
+
+.responsive {
+    padding-left: 10px;
+    margin-top: 5%;
+    margin-left: 4%;
+  padding: 0 6px;
+  float: left;
+  width: 20%;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------Footer------------------------------*/
+footer{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding-top: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.list{
+    float:left;
+    width: 50%;
+    padding: 10px;
+}
+
+.customer-care{
+    padding-top: 20px;
+   list-style: none;
+    margin-left: 78%;
+   
+}
+
+.customer-care li{
+    
+    float: left;
+    width: 300px;
+    
+}
+.customer-care li a{
+    text-align: left;
+    font-size: 14px;
+ 
+    color: #111;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.collection{
+    padding-top: 20px;
+    list-style: none;
+   margin-left: 13%;
+}
+
+.collection li{
+  float: left;
+    width: 400px;
+    
+}
+.collection li a{
+    text-align: left;
+    font-size: 14px;
+ 
+    color: #111;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.icons{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.icons li{
+    display: inline-block;
+    width: 50px;
+    height: 100px;
+    margin: 0px 10px;
+      padding-top: 40px;
+
+}
+
+.icons li a{
+    font-size: 25px;
+    color: #111;
+}
+
+footer ul li a:hover{
+    color:#ffa500;
+}
+
+hr{
+    width: 90%;
+    color: #e6e6e6;
+}
+
+p{
+    align-content: center;
+    color: gray;
+    font-size: 13px;
+    margin-left: 10%; 
+    margin-right: 10%;
+}
+/*--------------------------------------------------------------*/
+
+
+@media (max-width: 991px){
+    
+    .customer-care{
+        display: none;
+    }
+    
+    .collection{
+        display: none;
+    }
+    
+  
+ /*------------------------side bar menu------------------------------*/
+    header, header.sticky{
+        padding: 20px 50px;
+        z-index: 1000;
+    }
+    
+    .menu{
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        z-index:999;
+        border-top: 1px solid rgba(0,0,0,0.2)
+    }
+    
+    .menu.active{
+       left:0; 
+    }
+    
+   
+    
+    header ul li a{
+        color: #111;
+       
+        margin: 10px;
+    }
+    
+    .toggle{
+        width: 40px;
+        height: 40px;
+        background: url(menu.png);
+        background-position:right;
+    
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    
+    .toggle.acive{
+         width: 40px;
+        height: 40px;
+        background: url(close.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+    
+    header.sticky .toggle{
+        filter: invert(1);
+    }
+    
+    button{
+        background: #fff;
+        padding-top: 12px;
+    }
+    
+    /*-------------------------------------------------------------------*/
+    
+    .slide-container {
+ 
+  margin-top: 74px;
+}
+    
+    
+    .heading h2{
+       
+        font-size: 22px;
+   }
+    
+    .responsive {
+    width: 45%;
+  }
+    
+    div.desc a{
+        font-size: 14px;
+}
+    
+    
+}
